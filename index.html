@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e6a045db1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./app.js" defer></script>
+    <!-- Any of your own CSS would go here -->
+  </head>
+
+  <body>
+    <button id="open-modal-box-btn" class="btn btn-blue">Click me</button>
+    <div id="backdrop" class="backdrop hidden">
+      <div class="modal rounded-lg" id="ModalTest">
+        <span class="close" id="close-modal-box-btn">&times;</span>
+
+        <div class="flex flex-wrap">
+          <div class="wrapper md:flex">
+            <div class="w-full md:w-1/2">
+              <img
+                src="./assets/images/eu.jpg"
+                alt="user picture"
+                class="rounded-full"
+              />
+              <p class="m-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="user-name text-center font-semibold text-5xl">
+                Vasile
+              </div>
+              <div class="flex justify-evenly w-full m-1">
+                <button class="btn btn-blue m-1" id="hardSkilsBtn">
+                  Hard Skils
+                </button>
+                <button class="btn btn-blue m-1" id="softSkilsBtn">
+                  Soft Skils
+                </button>
+              </div>
+              <div class="relative p-3 hidden" id="softSkils">
+                <div
+                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-pink-200"
+                >
+                  <div
+                    style="width: 30%;"
+                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
+                  >
+                    skill #1
+                  </div>
+                </div>
+                <div
+                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-red-200"
+                >
+                  <div
+                    style="width: 50%;"
+                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
+                  >
+                    skill #2
+                  </div>
+                </div>
+                <div
+                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-blue-200"
+                >
+                  <div
+                    style="width: 80%;"
+                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
+                  >
+                    skill #3
+                  </div>
+                </div>
+              </div>
+              <!-- hard skils -->
+              <div class="relative p-3 hidden" id="hardSkils">
+                <div
+                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-pink-200"
+                >
+                  <div
+                    style="width: 30%;"
+                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
+                  >
+                    skill #1
+                  </div>
+                </div>
+                <div
+                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-red-200"
+                >
+                  <div
+                    style="width: 50%;"
+                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
+                  >
+                    skill #2
+                  </div>
+                </div>
+                <div
+                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-blue-200"
+                >
+                  <div
+                    style="width: 80%;"
+                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
+                  >
+                    skill #3
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-evenly">
+          <a href="#" class="hover:text-red-800">Git</a>
+          <a href="#" class="hover:text-red-800">Linkedin</a>
+          <a href="#" class="hover:text-red-800">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- members page -->
+    <h2
+      class="members page-section-heading text-center text-uppercase text-secondary mb-0 text-4xl"
+    >
+      MEMBERS
+    </h2>
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <img
+          class="banana block rounded-full"
+          src="./assets/images/banana_in_pijama.png "
+        />
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <div class="container my-12 mx-auto px-4 md:px-12">
+      <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        <!--Person-->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <!--Column-->
+          <article class="overflow-hidden rounded-lg shadow-lg modal-open">
+            <img
+              src="./assets/images/eu.jpg "
+              class="photo block h-auto w-full"
+            />
+            <div
+              class="flex-row items-center justify-between leading-none p-2 md:p-4 text-center"
+            >
+              <h1 class="name no-underline text-black text-2xl">
+                Alina Neculai
+              </h1>
+              <button class="btn border-4 rounded py-2 px-4 m-2">
+                <i class="far fa-eye pr-2"></i>View profile
+              </button>
+            </div>
+          </article>
+        </div>
+        <!--END Column-->
+        <!--END Person-->
+
+        <!--Person-->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <!--Column-->
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="./assets/images/eu.jpg "
+              class="photo block h-auto w-full"
+            />
+            <div
+              class="flex-row items-center justify-between leading-none p-2 md:p-4 text-center"
+            >
+              <h1 class="name no-underline text-black text-2xl">
+                Nicoleta Chirigiu
+              </h1>
+              <button class="btn border-4 rounded py-2 px-4 m-2">
+                <i class="far fa-eye pr-2"></i>View profile
+              </button>
+            </div>
+          </article>
+        </div>
+        <!--END Column-->
+        <!--END Person-->
+
+        <!--Person-->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <!--Column-->
+          <article
+            class="overflow-hidden rounded-lg shadow-lg hover:opacity-50"
+          >
+            <img
+              src=" ./assets/images/eu.jpg "
+              class="photo block h-auto w-full"
+            />
+            <div
+              class="flex-row items-center justify-between leading-none p-2 md:p-4 text-center"
+            >
+              <h1 class="name no-underline text-black text-2xl">
+                Andrei Stancu
+              </h1>
+              <button class="btn border-4 rounded py-2 px-4 m-2">
+                <i class="far fa-eye pr-2"></i>View profile
+              </button>
+            </div>
+          </article>
+        </div>
+        <!--END Column-->
+        <!--END Person-->
+
+        <!--Person-->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <!--Column-->
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="./assets/images/eu.jpg "
+              class="photo block h-auto w-full"
+            />
+            <div
+              class="flex-row items-center justify-between leading-none p-2 md:p-4 text-center"
+            >
+              <h1 class="name no-underline text-black text-2xl">
+                Robert Chirila
+              </h1>
+              <button class="btn border-4 rounded py-2 px-4 m-2">
+                <i class="far fa-eye pr-2"></i>View profile
+              </button>
+            </div>
+          </article>
+        </div>
+        <!--END Column-->
+        <!--END Person-->
+
+        <!--Person-->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <!--Column-->
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="./assets/images/eu.jpg "
+              class="photo block h-auto w-full"
+            />
+            <div
+              class="flex-row items-center justify-between leading-none p-2 md:p-4 text-center"
+            >
+              <h1 class="name no-underline text-black text-2xl">
+                Vicentiu Bota
+              </h1>
+              <button class="btn border-4 rounded py-2 px-4 m-2">
+                <i class="far fa-eye pr-2"></i>View profile
+              </button>
+            </div>
+          </article>
+        </div>
+        <!--END Column-->
+        <!--END Person-->
+
+        <!--Person-->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <!--Column-->
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="./assets/images/eu.jpg "
+              class="photo block h-auto w-full"
+            />
+            <div
+              class="flex-row items-center justify-between leading-none p-2 md:p-4 text-center"
+            >
+              <h1 class="name no-underline text-black text-2xl">
+                Marian Nechifor
+              </h1>
+              <button class="btn border-4 rounded py-2 px-4 m-2">
+                <i class="far fa-eye pr-2"></i>View profile
+              </button>
+            </div>
+          </article>
+        </div>
+        <!--END Column-->
+        <!--END Person-->
+      </div>
+    </div>
+  </body>
+</html>
