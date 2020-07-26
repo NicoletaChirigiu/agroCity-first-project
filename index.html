@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Employees page</title>
     <link rel="stylesheet" href="./public/styles.css" />
     <script
       src="https://kit.fontawesome.com/e6a045db1b.js"
@@ -14,114 +14,9 @@
   </head>
 
   <body>
-    <button id="open-modal-box-btn" class="btn btn-blue">Click me</button>
     <div id="backdrop" class="backdrop hidden">
-      <div class="modal rounded-lg" id="ModalTest">
-        <span class="close" id="close-modal-box-btn">&times;</span>
+      <div class="modal md:table rounded-lg" id="ModalTest">
 
-        <div class="flex flex-wrap">
-          <div class="wrapper md:flex">
-            <div class="w-full md:w-1/2">
-              <img
-                src="./assets/images/eu.jpg"
-                alt="user picture"
-                class="rounded-full"
-              />
-              <p class="m-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="w-full md:w-1/2">
-              <div class="user-name text-center font-semibold text-5xl">
-                Vasile
-              </div>
-              <div class="flex justify-evenly w-full m-1">
-                <button class="btn btn-blue m-1" id="hardSkilsBtn">
-                  Hard Skils
-                </button>
-                <button class="btn btn-blue m-1" id="softSkilsBtn">
-                  Soft Skils
-                </button>
-              </div>
-              <div class="relative p-3 hidden" id="softSkils">
-                <div
-                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-pink-200"
-                >
-                  <div
-                    style="width: 30%;"
-                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
-                  >
-                    skill #1
-                  </div>
-                </div>
-                <div
-                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-red-200"
-                >
-                  <div
-                    style="width: 50%;"
-                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                  >
-                    skill #2
-                  </div>
-                </div>
-                <div
-                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-blue-200"
-                >
-                  <div
-                    style="width: 80%;"
-                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
-                  >
-                    skill #3
-                  </div>
-                </div>
-              </div>
-              <!-- hard skils -->
-              <div class="relative p-3 hidden" id="hardSkils">
-                <div
-                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-pink-200"
-                >
-                  <div
-                    style="width: 30%;"
-                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
-                  >
-                    skill #1
-                  </div>
-                </div>
-                <div
-                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-red-200"
-                >
-                  <div
-                    style="width: 50%;"
-                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                  >
-                    skill #2
-                  </div>
-                </div>
-                <div
-                  class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-blue-200"
-                >
-                  <div
-                    style="width: 80%;"
-                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
-                  >
-                    skill #3
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-evenly">
-          <a href="#" class="hover:text-red-800">Git</a>
-          <a href="#" class="hover:text-red-800">Linkedin</a>
-          <a href="#" class="hover:text-red-800">Facebook</a>
-        </div>
       </div>
     </div>
 
@@ -158,8 +53,11 @@
               <h1 class="name no-underline text-black text-2xl">
                 Alina Neculai
               </h1>
-              <button class="btn border-4 rounded py-2 px-4 m-2">
-                <i class="far fa-eye pr-2"></i>View profile
+              <button
+                class="btn border-4 rounded py-2 px-4 m-2 userId"
+                data-userId="1"
+              >
+                <i class="far fa-eye pr-2"></i>Alina Neculai
               </button>
             </div>
           </article>
@@ -181,7 +79,10 @@
               <h1 class="name no-underline text-black text-2xl">
                 Nicoleta Chirigiu
               </h1>
-              <button class="btn border-4 rounded py-2 px-4 m-2">
+              <button
+                class="btn border-4 rounded py-2 px-4 m-2 userId"
+                data-userId="2"
+              >
                 <i class="far fa-eye pr-2"></i>View profile
               </button>
             </div>
@@ -206,7 +107,10 @@
               <h1 class="name no-underline text-black text-2xl">
                 Andrei Stancu
               </h1>
-              <button class="btn border-4 rounded py-2 px-4 m-2">
+              <button
+                class="btn border-4 rounded py-2 px-4 m-2 userId"
+                data-userId="3"
+              >
                 <i class="far fa-eye pr-2"></i>View profile
               </button>
             </div>
@@ -229,7 +133,10 @@
               <h1 class="name no-underline text-black text-2xl">
                 Robert Chirila
               </h1>
-              <button class="btn border-4 rounded py-2 px-4 m-2">
+              <button
+                class="btn border-4 rounded py-2 px-4 m-2 userId"
+                data-userId="4"
+              >
                 <i class="far fa-eye pr-2"></i>View profile
               </button>
             </div>
@@ -252,7 +159,10 @@
               <h1 class="name no-underline text-black text-2xl">
                 Vicentiu Bota
               </h1>
-              <button class="btn border-4 rounded py-2 px-4 m-2">
+              <button
+                class="btn border-4 rounded py-2 px-4 m-2 userId"
+                data-userId="5"
+              >
                 <i class="far fa-eye pr-2"></i>View profile
               </button>
             </div>
@@ -275,7 +185,10 @@
               <h1 class="name no-underline text-black text-2xl">
                 Marian Nechifor
               </h1>
-              <button class="btn border-4 rounded py-2 px-4 m-2">
+              <button
+                class="btn border-4 rounded py-2 px-4 m-2 userId"
+                data-userId="6"
+              >
                 <i class="far fa-eye pr-2"></i>View profile
               </button>
             </div>

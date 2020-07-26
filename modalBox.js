@@ -1,10 +1,8 @@
 import userData from "./employeeData.js";
 
-let backdrop = document.getElementById("backdrop");
-let userMainInfos = document.getElementById("ModalTest");
-let arr = [];
+
 const renderModalBox = () => {
-    let showModalBox = arr.reduce((acc, curentValue) => {
+    let showModalBox = userData.reduce((acc, curentValue) => {
         return (
             acc +
             `
@@ -12,10 +10,10 @@ const renderModalBox = () => {
 
             <div class="flex flex-wrap">
               <div class="wrapper md:flex">
-              <div class="w-full md:w-1/2">
-              
-              <img src="${curentValue.avatar}" alt="user picture" class="rounded-full"/>
-              <p> ${curentValue.description}</p> 
+                <div class="w-full md:w-1/2">
+                 
+                <p> ${curentValue.description}</p> 
+     <img src="${curentValue.avatar}" alt="user picture" class="rounded-full"/>
                  
                 </div>
                 <div class="w-full md:w-1/2">
@@ -38,7 +36,7 @@ const renderModalBox = () => {
                         style="width: 30%;"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
                       >
-                      ${curentValue.skils.hardSkils.skil3}
+                      ${curentValue.skils.softSkils.skil1}
                                               </div>
                     </div>
                     <div
@@ -48,8 +46,7 @@ const renderModalBox = () => {
                         style="width: 50%;"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
                       >
-                      ${curentValue.skils.hardSkils.skil3}
-
+                      ${curentValue.skils.softSkils.skil2}
                       </div>
                     </div>
                     <div
@@ -59,7 +56,7 @@ const renderModalBox = () => {
                         style="width: 80%;"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
                       >
-                      ${curentValue.skils.hardSkils.skil3}
+                      ${curentValue.skils.softSkils.skil3}
                       </div>
                     </div>
                   </div>
@@ -111,61 +108,9 @@ const renderModalBox = () => {
 }
 
 
+console.log(userData.hardSkils.skil1);
 
 
-const checkId = (id) => {
-    userData.forEach(el => {
-        if (id === el.id) {
-            arr = [el];
-        }
-    });
-
-}
-
-function toogleBackdrop(event) {
-    let userTargetId = parseInt(event.currentTarget.getAttribute("data-userId"));
-    checkId(userTargetId);
-    backdrop.classList.toggle("hidden");
-    backdrop.classList.toggle("flex");
-    renderModalBox();
-    closebtn();
-
-    addEventListener("click", closebtn);
-}
-
-const showModal = () => {
-    backdrop.classList.toggle("hidden");
-    backdrop.classList.toggle("flex");
-}
-
-window.addEventListener("load", getBtns);
-
-function getBtns() {
-    const employeeBtn = document.getElementsByClassName("userId");
-    for (let btn of employeeBtn) {
-        btn.addEventListener('click', toogleBackdrop);
-    }
-}
 
 
-function closebtn() {
-    document.getElementById("close-modal-box-btn").addEventListener("click", showModal);
-    document.getElementById("hardSkilsBtn").addEventListener("click", hardSkilsBtn);
-    document.getElementById("softSkilsBtn").addEventListener("click", softSkilsBtn);
-}
-
-window.onclick = event => {
-    if (event.target === backdrop) {
-        showModal();
-    }
-}
-
-function hardSkilsBtn() {
-    let hardSkilsUser = document.getElementById("hardSkils")
-    hardSkilsUser.classList.toggle("hidden");
-}
-
-function softSkilsBtn() {
-    let softSkils = document.getElementById("softSkils");
-    softSkils.classList.toggle("hidden");
-}
+export default renderModalBox;
